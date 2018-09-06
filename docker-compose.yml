@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./app:/usr/share/nginx/html
+    ports:
+      - "8080:80"
+   phantomjs:
+     image: shufo/phantomjs
+     command: --webdriver 4444
+     ports:
+       - "4444:4444"

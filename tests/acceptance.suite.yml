@@ -1,0 +1,15 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+
+actor: AcceptanceTester
+extensions:
+    enabled:
+      - Codeception\Extension\Phantoman
+modules:
+    enabled:
+        - Asserts
+        - WebDriver:
+            url: http://localhost:8080
+            browser: phantomjs

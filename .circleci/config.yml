@@ -1,0 +1,22 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.1
+
+    steps:
+      - checkout
+
+      - run:
+         command: |
+             sudo apt-get install -y libbz2-dev
+             sudo docker-php-ext-install bz2
+
+      - run: composer install
+
+      - setup_remote_docker
+
+      - run: sudo docker-compose up -d
+
+      - run: vendor/bin/codecept run
