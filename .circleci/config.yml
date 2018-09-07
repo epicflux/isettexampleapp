@@ -31,6 +31,6 @@ jobs:
       - run:
          <<: *install_composer
 
-      - run: docker exec project_php_1 bash -c cd '/usr/src/project';composer install'
+      - run: docker exec project_php_1 bash -c 'cd /usr/src/project;composer install'
 
-      - run: docker exec project_php_1 bash -c cd '/usr/src/project';vendor/bin/codecept run'
+      - run: docker exec project_php_1 bash -c 'cd /usr/src/project;vendor/bin/codecept run'
