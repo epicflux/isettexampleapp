@@ -8,5 +8,6 @@ modules:
     enabled:
         - Asserts
         - WebDriver:
-            url: http://web
+            url: http://php
             browser: phantomjs
+            host: phantomjs
