@@ -23,6 +23,8 @@ jobs:
     steps:
       - checkout
 
+      - run: sudo docker-compose up -d
+
       - run:
          <<: *install_php_ext
 
@@ -30,7 +32,5 @@ jobs:
          <<: *install_composer
 
       - run: composer install
-
-      - run: sudo docker-compose up -d
 
       - run: docker exec circleci_php_1 bash -c '/usr/src/project/vendor/bin/codecept run'
