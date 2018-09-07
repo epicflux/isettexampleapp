@@ -1,12 +1,13 @@
 version: '2'
 
 services:
-  web:
-    image: nginx
+  php:
+    image: php:7.2-apache
     volumes:
-      - ./app:/usr/share/nginx/html
+      - .:/usr/src/project
+      - ./app:/var/www/html
     ports:
-      - "8080:80"
+      - "8081:80"
   phantomjs:
     image: davert/phantomjs-env
     ports:
