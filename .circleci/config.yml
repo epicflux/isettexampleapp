@@ -11,7 +11,7 @@ install_php_ext: &install_php_ext
 install_composer: &install_composer
     name: Install Composer
     command: |
-        docker exec circleci_php_1 bash -c 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer'
+        docker exec project_php_1 bash -c 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer'
 
 version: 2
 
