@@ -5,6 +5,12 @@ install_php: &install_php
         sudo apt-get update
         sudo apt-get install php7.0 php7.0-cli php7.0-json php7.0-readline php7.0-mbstring php7.0-bz2 php7.0-dom php7.0-curl
 
+install_composer: &install_composer
+    name: Install Composer
+    command: |
+        ls -al
+        curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
 version: 2
 
 jobs:
@@ -17,6 +23,9 @@ jobs:
 
       - run:
          <<: *install_php
+
+      - run:
+         <<: *install_composer
 
       - run: composer install
 
