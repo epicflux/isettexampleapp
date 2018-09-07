@@ -2,15 +2,6 @@
   "name": "jisettcirclci",
   "type": "project",
   "require": {
-    "codeception/codeception": "2.3.4",
-    "jakoch/phantomjs-installer": "2.1.1-p09"
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "PhantomInstaller\\Installer::installPhantomJS"
-    ],
-    "post-update-cmd": [
-      "PhantomInstaller\\Installer::installPhantomJS"
-    ]
+    "codeception/codeception": "2.3.4"
   }
 }

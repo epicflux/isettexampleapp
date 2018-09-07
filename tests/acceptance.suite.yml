@@ -4,12 +4,9 @@
 # Perform tests in browser using the WebDriver or PhpBrowser.
 
 actor: AcceptanceTester
-extensions:
-    enabled:
-      - Codeception\Extension\Phantoman
 modules:
     enabled:
         - Asserts
         - WebDriver:
-            url: http://localhost:8080
+            url: http://web
             browser: phantomjs
