@@ -16,7 +16,7 @@ jobs:
       - checkout
 
       - run:
-        <<: *install_php
+         <<: *install_php
 
       - run: composer install
 
