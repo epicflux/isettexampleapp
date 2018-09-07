@@ -33,4 +33,4 @@ jobs:
 
       - run: composer install
 
-      - run: docker exec circleci_php_1 bash -c '/usr/src/project/vendor/bin/codecept run'
+      - run: docker exec project_php_1 bash -c '/usr/src/project/vendor/bin/codecept run'
